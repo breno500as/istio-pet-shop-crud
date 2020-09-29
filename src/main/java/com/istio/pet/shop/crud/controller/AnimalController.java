@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.istio.pet.shop.crud.entity.Dog;
+import com.istio.pet.shop.crud.entity.Animal;
 
 @RestController
-@RequestMapping("/dogs")
-public class DogController {
+@RequestMapping("animais")
+public class AnimalController {
 
 	@GetMapping
-	public ResponseEntity<List<Dog>> getDogs() {
-		final List<Dog> dogs = new ArrayList<>();
-		dogs.add(new Dog(1L, "bertos"));
-		dogs.add(new Dog(2L, "brahminha"));
-		return ResponseEntity.ok(dogs);
+	public ResponseEntity<List<Animal>> getAnimals() {
+		final List<Animal> animals = new ArrayList<>();
+		animals.add(new Animal(1L, "Dog 1"));
+		animals.add(new Animal(2L, "Cat 2"));
+		return ResponseEntity.ok(animals);
 	}
 
 }
