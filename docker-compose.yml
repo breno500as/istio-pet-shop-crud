@@ -1,0 +1,17 @@
+version: "3"
+services:
+ web:
+   image: pet-shop-crud:v1
+   container_name: pet-shop-crud
+   build:
+     context: .
+     dockerfile: ./Dockerfile
+   ports:
+    - '8081:8081'
+   environment:
+    - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE:-dsv}
+   networks:
+    - istio-pet-shop-crud-network
+networks:
+ istio-pet-shop-crud-network:
+  driver: bridge

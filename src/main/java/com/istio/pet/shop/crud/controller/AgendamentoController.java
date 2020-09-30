@@ -22,7 +22,7 @@ public class AgendamentoController {
 		
 		CloseableHttpClient client = HttpClientBuilder.create().build();
 
-		CloseableHttpResponse response = client.execute(new HttpPost("http://localhost:8082/pagamento/lancamentos"));
+		CloseableHttpResponse response = client.execute(new HttpPost("http://localhost:8082/financa/pagamentos"));
 		
 		System.out.println(response.getStatusLine().getStatusCode());
 		
