@@ -4,10 +4,10 @@ metadata:
  name: pet-shop-crud-service
 spec:
   ports:
-   -port: 31004
-    nodePort: 31004
-    targetPort: ps-crud-port
-    protocol: TCP
+   - port: 31004
+     nodePort: 31004
+     targetPort: ps-crud-port
+     protocol: TCP
   type: NodePort
   selector: 
    app: pet-shop-crud
