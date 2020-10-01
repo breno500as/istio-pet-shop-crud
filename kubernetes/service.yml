@@ -4,10 +4,8 @@ metadata:
  name: pet-shop-crud-service
 spec:
   ports:
-   - port: 31004
-     nodePort: 31004
-     targetPort: ps-crud-port
-     protocol: TCP
-  type: NodePort
+   - name: http #nome da porta para acessar o container docker dentro do pod, é o mesmo nome configurado no objeto deployment
+     port: 80 #porta externa de acesso ao serviço
+     targetPort: 8081 #porta para acessar o container docker dentro do pod, é a mesma porta configurada no objeto deployment
   selector: 
    app: pet-shop-crud

@@ -14,21 +14,21 @@ spec:
    spec:
      containers:
        - name: pet-shop-crud
-         image: breno500as/pet-shop-crud:v2
+         image: breno500as/pet-shop-crud:v3
          ports:
-          - name: ps-crud-port
+          - name: http
             containerPort: 8081
          livenessProbe:
            httpGet: 
             path: /crud/actuator/health
-            port: ps-crud-port
+            port: http
            periodSeconds: 100
            initialDelaySeconds: 100
            timeoutSeconds: 10
          readinessProbe:
            httpGet:
              path: /crud/actuator/health
-             port: ps-crud-port
+             port: http
            periodSeconds: 100
            initialDelaySeconds: 100
            timeoutSeconds: 10
