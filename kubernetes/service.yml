@@ -9,3 +9,4 @@ spec:
      targetPort: 8081 #porta para acessar o container docker dentro do pod, é a mesma porta configurada no objeto deployment
   selector: 
    app: pet-shop-crud
+   
