@@ -14,7 +14,7 @@ spec:
    spec:
      containers:
        - name: pet-shop-crud
-         image: breno500as/pet-shop-crud:v3
+         image: breno500as/pet-shop-crud:v4
          ports:
           - name: http
             containerPort: 8081

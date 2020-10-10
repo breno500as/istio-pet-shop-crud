@@ -1,7 +1,7 @@
 version: "3"
 services:
  web:
-   image: pet-shop-crud:v3
+   image: pet-shop-crud:v4
    container_name: pet-shop-crud
    build:
      context: .
