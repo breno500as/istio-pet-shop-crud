@@ -20,14 +20,14 @@ spec:
             containerPort: 8081
          livenessProbe:
            httpGet: 
-            path: /crud/actuator/health
+            path: /crud/actuator/health/liveness
             port: http
            periodSeconds: 100
            initialDelaySeconds: 100
            timeoutSeconds: 10
          readinessProbe:
            httpGet:
-             path: /crud/actuator/health
+             path: /crud/actuator/health/readiness
              port: http
            periodSeconds: 100
            initialDelaySeconds: 100
