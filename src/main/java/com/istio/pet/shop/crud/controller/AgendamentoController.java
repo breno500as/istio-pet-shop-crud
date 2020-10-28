@@ -22,7 +22,8 @@ public class AgendamentoController {
 		
 		CloseableHttpClient client = HttpClientBuilder.create().build();
 
-		CloseableHttpResponse response = client.execute(new HttpPost("http://pet-shop-finances-service/financa/pagamentos"));
+		//o host deve ser o mesmo nome do atributo name do service
+		CloseableHttpResponse response = client.execute(new HttpPost("http://pet-shop-finances/financa/pagamentos"));
 		
 		System.out.println(response.getStatusLine().getStatusCode());
 		
